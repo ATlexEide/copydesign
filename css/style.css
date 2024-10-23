@@ -1,5 +1,7 @@
 :root {
-  --section-width: 80vw;
+  --section-width: 70vw;
+  --article-height: 60%;
+  --article-width: 30%;
 }
 * {
   margin: 0;
@@ -23,12 +25,13 @@ section {
 article {
   background-color: blue;
   display: flex;
-  align-items: center;
+  align-items: start;
+  justify-content: space-between;
 
   flex-direction: column;
-  padding: 20px;
-  height: 60%;
-  width: calc(var(--section-width) / 3);
+  padding: 48px;
+  height: var(--article-height);
+  width: var(--article-width);
 }
 article:nth-child(1) {
   background-color: #e28525;
@@ -38,6 +41,25 @@ article:nth-child(2) {
 }
 article:nth-child(3) {
   background-color: #00403f;
+}
+p {
+  min-height: 50%;
+  border: 1px solid white;
+  font-family: "Lexend Deca", serif;
+  font-weight: 400;
+}
+h1 {
+  font-family: "Big Shoulders Display", sans-serif;
+  font-weight: 700;
+  font-size: 300%;
+}
+.icon {
+  height: 50px;
+}
+.learn-more {
+  aspect-ratio: 3/1;
+  height: 48px;
+  border-radius: 25px;
 }
 /* DEAFAULT ATTRIBUTES FROM FRONTEND MENTOR */
 .attribution {
