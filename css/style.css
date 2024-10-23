@@ -1,8 +1,10 @@
 :root {
   --section-width: 70vw;
+  --section-border-radius: 10px;
   --article-height: 60%;
   --article-width: 30%;
-  --bg-color: hsla(0, 0%, 100%, 0.75);
+  --bg-color: hsl(0, 0%, 95%);
+  --p-bg-color: hsla(0, 0%, 100%, 0.75);
   --sedan-color: #e28525;
   --suv-color: #016972;
   --luxury-color: #00403f;
@@ -33,18 +35,30 @@ article {
   justify-content: space-between;
 
   flex-direction: column;
-  padding: 48px;
+  padding: 58px;
   height: var(--article-height);
   width: var(--article-width);
 }
 article:nth-child(1) {
+  border-radius: var(--section-border-radius) 0 0 var(--section-border-radius);
+
   background-color: var(--sedan-color);
+}
+article:nth-child(1) > a > button {
+  color: var(--sedan-color);
 }
 article:nth-child(2) {
   background-color: var(--suv-color);
 }
+article:nth-child(2) > a > button {
+  color: var(--suv-color);
+}
 article:nth-child(3) {
+  border-radius: 0 var(--section-border-radius) var(--section-border-radius) 0;
   background-color: var(--luxury-color);
+}
+article:nth-child(3) > a > button {
+  color: var(--luxury-color);
 }
 h1 {
   font-family: "Big Shoulders Display", sans-serif;
@@ -52,12 +66,21 @@ h1 {
   font-size: 300%;
   color: var(--bg-color);
 }
-p {
-  min-height: 50%;
-  border: 1px solid white;
+p,
+article > a > button {
   font-family: "Lexend Deca", serif;
   font-weight: 400;
-  color: var(--bg-color);
+}
+button {
+  background-color: var(--bg-color);
+  border: none;
+}
+p {
+  font-size: 1.3rem;
+  opacity: 0.7;
+  line-height: 1.5;
+  min-height: 50%;
+  color: var(--p-bg-color);
 }
 .icon {
   height: 50px;
