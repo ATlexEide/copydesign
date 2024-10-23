@@ -67,13 +67,9 @@ h1 {
   color: var(--bg-color);
 }
 p,
-article > a > button {
+.learn-more > h2 {
   font-family: "Lexend Deca", serif;
   font-weight: 400;
-}
-button {
-  background-color: var(--bg-color);
-  border: none;
 }
 p {
   font-size: 1.3rem;
@@ -81,6 +77,19 @@ p {
   line-height: 1.5;
   min-height: 50%;
   color: var(--p-bg-color);
+}
+.learn-more {
+  background-color: var(--bg-color);
+  cursor: pointer;
+  border: none;
+}
+.learn-more:hover {
+  background-color: rgb(0, 0, 0, 0);
+  border: solid var(--bg-color) 2px;
+  color: var(--bg-color);
+}
+.learn-more > h2:hover {
+  color: var(--bg-color);
 }
 .icon {
   height: 50px;
