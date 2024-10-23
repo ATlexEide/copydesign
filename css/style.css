@@ -64,7 +64,7 @@ article:nth-child(3) {
 article:nth-child(3) > a > button {
   color: var(--luxury-color);
 }
-h1 {
+h2 {
   font-family: "Big Shoulders Display", sans-serif;
   font-weight: 700;
   font-size: 300%;
