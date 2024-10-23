@@ -1,0 +1,49 @@
+:root {
+  --section-width: 80vw;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+html {
+  background-color: hsla(0, 0%, 100%, 0.75);
+}
+body {
+  display: grid;
+  place-content: center;
+}
+section {
+  display: flex;
+  align-items: center;
+  height: 100svh;
+  width: var(--section-width);
+}
+article {
+  background-color: blue;
+  display: flex;
+  align-items: center;
+
+  flex-direction: column;
+  padding: 20px;
+  height: 60%;
+  width: calc(var(--section-width) / 3);
+}
+article:nth-child(1) {
+  background-color: #e28525;
+}
+article:nth-child(2) {
+  background-color: #016972;
+}
+article:nth-child(3) {
+  background-color: #00403f;
+}
+/* DEAFAULT ATTRIBUTES FROM FRONTEND MENTOR */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
