@@ -88,7 +88,7 @@ p {
 .learn-more {
   background: none;
   height: 48px;
-  width: 100%;
+  width: 80%;
 }
 .learn-more button {
   background-color: var(--bg-color);
@@ -118,4 +118,32 @@ p {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+@media only screen and (max-width: 1000px) {
+  main {
+    width: 100%;
+  }
+  section {
+    height: 100svh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: var(--article-height) 0;
+  }
+  article {
+    min-width: 50%;
+  }
+  p {
+    padding: 1em;
+  }
+  article:first-child {
+    border-radius: var(--section-border-radius) var(--section-border-radius) 0 0
+      0;
+  }
+  article:last-child {
+    border-radius: 0 0 var(--section-border-radius) var(--section-border-radius);
+  }
+  .attribution {
+    display: none;
+  }
 }
